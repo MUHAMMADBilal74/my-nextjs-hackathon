@@ -229,69 +229,34 @@ const Sidebar = () => (
 
 // HomePage Component with Sidebar, Categories, and Footer
 const HomePage = () => (
-  <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem' }}>
+  <div className="flex flex-col p-4 sm:p-6 lg:p-8">
     <Navbar />
 
     {/* Hero Section with Background Image */}
     <div
-      style={{
-        backgroundImage: 'url(/images/hero-background.jpg)', // Path to your background image
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '250px', // Decreased height
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: '#fff',
-        borderRadius: '10px',
-        marginBottom: '2rem',
-      }}
+      className="relative bg-cover bg-center h-64 sm:h-80 rounded-lg mb-8"
+      style={{ backgroundImage: 'url(/images/hero-background.jpg)' }}
     >
-      <h1
-        style={{
-          fontSize: '3rem',
-          fontWeight: '700',
-          textAlign: 'center',
-          color: '#800080', // Purple color for text
-        }}
-      >
+      <h1 className="absolute text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-purple-800 top-1/2 transform -translate-y-1/2 w-full">
         BISMILLAH
       </h1>
     </div>
 
-    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '2rem' }}>
+    <div className="flex flex-col lg:flex-row gap-8">
       {/* Sidebar for filters */}
-      <Sidebar />
+      <div className="w-full lg:w-1/4 p-4 bg-blue-200 rounded-lg shadow-lg">
+        <Sidebar />
+      </div>
 
       {/* Main Content: Products and Categories */}
-      <div style={{ flex: 1, marginLeft: '2rem' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column', // Ensure categories stack vertically
-            gap: '2rem', // Space between categories
-            marginTop: '2rem',
-          }}
-        >
+      <div className="flex-1">
+        <div className="space-y-8 mt-4">
           {categories.map((category, index) => (
-            <div key={index} style={{ minWidth: '300px' }}>
-              <h2
-                style={{
-                  fontSize: '2rem',
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginBottom: '1rem',
-                  color: '#333',
-                }}
-              >
-                {category.name}
-              </h2>
+            <div key={index}>
+              <h2 className="text-2xl font-bold text-center mb-4 text-gray-800">{category.name}</h2>
               <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-                  gap: '1.5rem',
-                }}
+                className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
+                style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}
               >
                 {category.products.map((product) => (
                   <ProductCard key={product.id} product={product} />

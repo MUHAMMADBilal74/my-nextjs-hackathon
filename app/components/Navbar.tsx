@@ -13,63 +13,29 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      style={{
-        backgroundColor: '#FFD700', // Gold background for a premium look
-        padding: '1rem 2rem',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        position: 'sticky',
-        top: 0,
-        zIndex: 50,
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <nav className="bg-yellow-500 p-4 shadow-lg sticky top-0 z-50">
+      <div className="flex justify-between items-center">
         {/* Left Section: ShopName */}
-        <h1
-          style={{
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            color: '#FF4500', // Vibrant red-orange for prominence
-            margin: 0,
-            fontFamily: `'Brush Script MT', cursive`, // Fancy handwritten style
-            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)', // Subtle shadow for a glowing effect
-          }}
-        >
+        <h1 className="text-2xl font-bold text-orange-600 m-0 font-serif text-shadow-lg">
           ALLAH RAAZI
         </h1>
 
         {/* Right Section: Search bar and Cart */}
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="flex items-center gap-4">
           {/* Search Bar */}
           <input
             type="text"
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="Search products..."
-            style={{
-              padding: '0.5rem',
-              border: '1px solid #ddd',
-              borderRadius: '8px',
-              marginRight: '1rem',
-              outline: 'none',
-            }}
+            className="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
 
           {/* Cart Icon */}
-          <div style={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+          <div className="relative">
             <FaShoppingCart size={24} color="#333" />
             <span
-              style={{
-                position: 'absolute',
-                top: '0',
-                right: '0',
-                backgroundColor: '#FF4500', // Vibrant red-orange for the cart badge
-                color: 'white',
-                borderRadius: '50%',
-                padding: '0.2rem 0.4rem',
-                fontSize: '0.75rem',
-                fontWeight: 'bold', // Make the badge text bold
-              }}
+              className="absolute top-0 right-0 bg-orange-600 text-white rounded-full text-xs font-bold w-5 h-5 flex items-center justify-center"
             >
               0
             </span>

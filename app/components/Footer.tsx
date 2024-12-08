@@ -1,42 +1,18 @@
-// Footer.tsx
 const Footer = () => (
-  <footer
-    style={{
-      backgroundColor: '#333', // Dark background for the footer
-      color: '#fff', // Light text color for contrast
-      padding: '1rem 2rem', // Padding for spacing
-      textAlign: 'center',
-      marginTop: '2rem',
-      borderTop: '1px solid #ddd', // Subtle border to separate from content
-    }}
-  >
-    <p
-      style={{
-        fontSize: '1rem',
-        margin: '0',
-        letterSpacing: '0.5px',
-      }}
-    >
+  <footer className="bg-gray-800 text-white py-4 mt-8 border-t border-gray-600">
+    <p className="text-center text-sm tracking-wide">
       &copy; 2024 BISMILLAH. All rights reserved.
     </p>
-    <div style={{ marginTop: '1rem' }}>
+    <div className="mt-4 flex justify-center flex-wrap gap-6">
       <a
         href="/privacy-policy"
-        style={{
-          color: '#fff',
-          textDecoration: 'none',
-          margin: '0 1rem',
-        }}
+        className="text-white hover:underline text-sm"
       >
         Privacy Policy
       </a>
       <a
         href="/terms-of-service"
-        style={{
-          color: '#fff',
-          textDecoration: 'none',
-          margin: '0 1rem',
-        }}
+        className="text-white hover:underline text-sm"
       >
         Terms of Service
       </a>
