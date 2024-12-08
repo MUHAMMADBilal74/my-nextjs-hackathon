@@ -27,19 +27,19 @@ const categories = [
   {
     name: 'Groceries',
     products: [
-      { id: 4, title: 'Organic Apples', price: '$3', description: 'Fresh and organic', image: '/images/apple.jpg' },
-      { id: 5, title: 'Bananas', price: '$2', description: 'Sweet and ripe bananas', image: '/images/banana.jpg' },
-      { id: 6, title: 'Carrots', price: '$1.5', description: 'Healthy and crunchy carrots', image: '/images/carrot.jpg' },
-      { id: 7, title: 'Mango', price: '$1.5', description: 'Sweet and delicious mangoes', image: '/images/mango.jpg' },
+      { id: 5, title: 'Organic Apples', price: '$3', description: 'Fresh and organic', image: '/images/apple.jpg' },
+      { id: 6, title: 'Bananas', price: '$2', description: 'Sweet and ripe bananas', image: '/images/banana.jpg' },
+      { id: 7, title: 'Carrots', price: '$1.5', description: 'Healthy and crunchy carrots', image: '/images/carrot.jpg' },
+      { id: 8, title: 'Mango', price: '$1.5', description: 'Sweet and delicious mangoes', image: '/images/mango.jpg' },
     ]
   },
   {
     name: 'Gym Equipment',
     products: [
-      { id: 7, title: 'Dumbbells', price: '$25', description: 'Adjustable dumbbells', image: '/images/dumbbells.jpg' },
-      { id: 8, title: 'Treadmill', price: '$500', description: 'High-quality treadmill', image: '/images/treadmill.jpg' },
-      { id: 9, title: 'Yoga Mat', price: '$15', description: 'Non-slip yoga mat', image: '/images/yogamat.jpg' },
-      { id: 10, title: 'Knee sleeve', price: '$15', description: 'Open patella knee sleeve', image: '/images/kneeslevee.jpg' },
+      { id: 9, title: 'Dumbbells', price: '$25', description: 'Adjustable dumbbells', image: '/images/dumbbells.jpg' },
+      { id: 10, title: 'Treadmill', price: '$500', description: 'High-quality treadmill', image: '/images/treadmill.jpg' },
+      { id: 11, title: 'Yoga Mat', price: '$15', description: 'Non-slip yoga mat', image: '/images/yogamat.jpg' },
+      { id: 12, title: 'Knee Sleeve', price: '$15', description: 'Open patella knee sleeve', image: '/images/kneesleeve.jpg' },
     ]
   }
 ];
@@ -164,7 +164,7 @@ const Sidebar = () => (
     <h3 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#FF6347', marginBottom: '1rem' }}>
       Filter Products
     </h3>
-    
+
     {/* Categories Filter */}
     <div style={{ marginBottom: '1rem' }}>
       <h4 style={{ fontSize: '1rem', fontWeight: '600', color: '#fff' }}>Categories</h4>
@@ -231,7 +231,7 @@ const Sidebar = () => (
 const HomePage = () => (
   <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem' }}>
     <Navbar />
-    
+
     {/* Hero Section with Background Image */}
     <div
       style={{
