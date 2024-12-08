@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const productData = {
   1: {
@@ -50,12 +51,12 @@ export default function Product() {
       <h1 className="text-3xl font-bold mt-6">{product.title}</h1>
       <p className="text-gray-600 mt-4">{product.description}</p>
       <p className="text-xl font-semibold text-primary mt-2">{product.price}</p>
-      <a
-        href="/"
-        className="mt-6 px-6 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition"
-      >
-        Go Back to Shop
-      </a>
+      {/* Update the <a> tag to <Link> component for internal navigation */}
+      <Link href="/" passHref>
+        <a className="mt-6 px-6 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition">
+          Go Back to Shop
+        </a>
+      </Link>
     </div>
   );
 }

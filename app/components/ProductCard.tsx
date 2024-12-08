@@ -1,6 +1,14 @@
 'use client'; // Ensure the component is a client-side component
 
-const ProductCard = ({ product }) => {
+type Product = {
+  id: number;
+  title: string;
+  price: string;
+  description: string;
+  image: string;
+};
+
+const ProductCard = ({ product }: { product: Product }) => {
   // Event handler functions
   const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLElement;
